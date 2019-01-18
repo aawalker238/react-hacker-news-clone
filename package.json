@@ -1,0 +1,16 @@
+{
+  "name": "hacker-news-clone",
+  "version": "1.0.0",
+  "description": "A Hacker News clone",
+  "main": "server.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "author": "Anthony Walker",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
