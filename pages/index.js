@@ -23,9 +23,19 @@ class Index extends Component {
     return { stories, pageNumber };
   }
 
+  componentDidMount() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/service-worker.js')
+        .then(registration => {
+          console.log('Service worker registration successful:', registration);
+        })
+        .catch(err => console.warn('Service worker registration failed:', err));
+    }
+  }
+
   render() {
     const { stories, pageNumber } = this.props;
-    console.log(stories);
     const nextPage = pageNumber + 1 || pageNumber;
     if (stories.length === 0) {
       return <Error statusCode={503} />;

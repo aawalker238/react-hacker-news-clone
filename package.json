@@ -2,9 +2,12 @@
   "name": "hacker-news-clone",
   "version": "1.0.0",
   "description": "A Hacker News clone",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "next"
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js",
+    "build": "next build",
+    "deploy": "now --public"
   },
   "author": "Anthony Walker",
   "license": "ISC",
@@ -12,6 +15,7 @@
     "isomorphic-fetch": "^2.2.1",
     "next": "^7.0.2",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "sw-precache-webpack-plugin": "^0.11.5"
   }
 }
