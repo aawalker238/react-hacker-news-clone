@@ -30,7 +30,9 @@ class Index extends Component {
         .then(registration => {
           console.log('Service worker registration successful:', registration);
         })
-        .catch(err => console.warn('Service worker registration failed:', err));
+        .catch(err =>
+          console.warn('Service worker registration failed:', err.message)
+        );
     }
   }
 

@@ -2,7 +2,7 @@
   "name": "hacker-news-clone",
   "version": "1.0.0",
   "description": "A Hacker News clone",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "node server.js",
     "start": "NODE_ENV=production node server.js",
